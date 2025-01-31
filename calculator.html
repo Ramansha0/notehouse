@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+</head>
+<style>
+    .body{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+         flex-direction: column;
+         font-family:Verdana, Geneva, Tahoma, sans-serif;
+         background-color:aqua;
+    }
+    .cal{
+        font-size:70px;
+        font-weight:800;
+        margin-top:20px
+    }
+    .box{
+        background-color:#3f3e4c;
+        width:300px;
+        height:440px;
+        margin-top:20px;
+        border-radius:15px;
+        border:1px solid white ;
+ 
+    }
+    .write{
+        width:90%;
+     border: 2px solid black;
+        margin-top: 10px ;
+        margin-left:10px;
+
+        height:60px;
+ font-size: 25px;
+ font-weight:600;
+        border-radius:5px;
+      
+    }
+    .letters{
+        display:flex;
+        justify-content: space-evenly;
+        margin-top:30px ;
+    
+        
+    }
+    .names{
+        width:50px;
+        height: 40px;
+        border-radius:5px;
+        border:none;
+        font-size:18px;
+        font-weight:700;
+        color: white;
+       
+        background-color:#575656;
+        box-shadow:5px 5px  4px black;
+      
+    }
+    .name1{
+        width:120px;
+        
+        height: 40px;
+        border-radius:5px;
+        border:none;
+        font-size:18px;
+        font-weight:700;
+        box-shadow:5px 5px  4px;
+    }
+</style>
+<body class="body">
+ <div class="cal">Calculator</div>
+    <div class="box">
+<input class="write" readonly ></input>
+<div class="letters">
+    <button class="names" style="background-color: rgb(70, 192, 249);" id="clear">C</button>
+    <button class="names" id="cut"><i  class="fa-solid fa-delete-left"></i></button>
+    <button class="names">.</button>
+    <button style="background-color: rgb(70, 192, 249);" class="names">/</button>
+
+</div>
+<div class="letters">
+    <button class="names">7</button>
+    <button class="names">8</button>
+    <button class="names">9</button>
+    <button style="background-color: rgb(70, 192, 249);" class="names">*</button>
+
+</div>
+<div class="letters">
+    <button class="names">4</button>
+    <button class="names">5</button>
+    <button class="names">6</button>
+    <button style="background-color: rgb(70, 192, 249);" class="names">+</button>
+
+</div>
+<div class="letters">
+    <button class="names">1</button>
+    <button class="names">2</button>
+    <button class="names">3</button>
+    <button style="background-color: rgb(70, 192, 249);" class="names">-</button>
+
+</div>
+<div class="letters">
+    <button class="name1" id="name1">0</button>
+
+    <button class="names">.</button>
+    <button style="background-color: rgb(70, 192, 249);" id="result" class="names">=</button>
+
+</div>
+    </div>
+    <script> 
+         const buttons = document.querySelectorAll('.names');
+         const button1 = document.getElementById('name1')
+       let write = document.querySelector('.write');
+     
+button1.addEventListener('click',function(){
+    let value = this.innerText;
+  if (value !== 'C' && value !== '=') {
+                    write.value += value;
+                }
+})
+
+
+       buttons.forEach(button => {
+        button.addEventListener('click',function(){
+  let value = this.innerText;
+  if (value !== 'C' && value !== '=') {
+                    write.value += value;
+                }
+});
+       });
+
+
+    //about the clear section .
+    let clear = document.getElementById('clear');
+        clear.addEventListener('click', function() {
+            write.value = '';  // Clear the input field when 'clear' button is clicked
+        });
+          
+
+        //length finding
+let cut = document.getElementById('cut');
+    
+           
+                cut.addEventListener('click', function() {
+    write.value = write.value.slice(0, -1); 
+});
+
+//result
+document.getElementById('result').addEventListener('click', function() {
+            
+            try{
+                write.value = eval(write.value);
+            }
+            catch  (error) {
+                write.value = 'Error';
+            }
+          
+        });
+
+    
+        
+
+    </script>
+</body>
+</html>
