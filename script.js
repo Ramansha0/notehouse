@@ -33,13 +33,13 @@ scrollUpBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-let personal = document.getElementById("personal1");
-let loader = document.getElementById("loader");
+let personal1 = document.getElementById("personal1");
+let loader1 = document.getElementById("loader1");
 
-personal.addEventListener("click", () => {
-    loader.style.display = "block"
+personal1.addEventListener("click", () => {
+    loader1.style.display = "block"
     setTimeout(() => {
-        window.location.href = "http://127.0.0.1:5500/index.html";
+        window.location.href = "http://127.0.0.1:5500/index1.html";
 }, 3000);
    
 })

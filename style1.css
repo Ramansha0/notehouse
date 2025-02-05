@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  html,body{
+    scroll-behavior: smooth;
+  }
+
+/* Header Styling */
+header {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+position:relative;
+
+width:100%;
+transition:0.6s ease
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: NOne ;
+    color: Black;
+ 
+}
+
+.logo  {
+    text-decoration: none;
+    color: Black;
+    font-size: 24px;
+    font-weight: bold;
+    width:20px;
+    height:20px ;
+    margin-top:-50px
+}
+.search{
+ 
+  width:350px;
+  height:28px;
+  border:none;
+  margin-left:7px;
+  margin-top: 3px;
+  border-left: none;
+  outline: none;
+  font-size:15px
+}
+.search:focus{
+  border-color:transparent;
+}
+.back{
+  width:400px;
+  background-color:white ;height:35px;
+  align-items: center;
+  border-radius:20px;
+  border:2px solid black;
+  margin-left:200px;
+ 
+}
+.img1{
+  background-size:cover;
+  margin-top: 4px;
+  HEIGHT:62px;
+  width:180px
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li a {
+    display: block;
+    color: Black;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    background-color: #48cae4;
+}
+
+
+.more-options {
+    position: relative;
+}
+
+.more-options-btn {
+    background-color: #0668ca;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.more-options-btn:hover {
+    background-color: #00509e;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #06396c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #00509e;
+}
+
+.dropdown-menu li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #00509e;
+}
+
+
+.more-options:hover .dropdown-menu {
+    display: block;
+}
+
+
+.glass{
+    height:80px;
+    width:80px;
+    
+}
+.subject{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin-left:-10px;
+    margin-top:20px;
+    
+}
+.topic{
+    font-size:60px;
+    font-weight:700;
+margin-top:10px;
+text-shadow: 2px 2px 2px rgb(32, 182, 232);
+}
+
+.boxes{
+    width:450px;
+    height:90px;
+    
+    margin-left:30px;
+    margin-top:10px;
+}
+.boxes1{
+    width:390px;
+    height:100px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    margin-left:30px;
+    margin-top:-30px;
+    margin-bottom:-10px
+}
+.page{
+    display: flex;
+}
+.Name{
+    margin-left:300px;
+   margin-top:-30px;
+   text-shadow: 2px 2px rgb(113, 189, 255)
+}
+.sides{
+    display:flex;
+    margin-left :100px;
+   
+}
+.side1,.side2{
+width:200px;
+text-align:center;
+
+
+
+}
+.side2{
+    margin-left:130px
+}
+.chap1{
+
+    margin-top:20px;
+    height:30px;
+    border-radius:10px;
+    background: linear-gradient(to right, rgb(135, 206, 235), rgb(70, 130, 180));
+    color: White;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:600;
+    font-size:18px;
+    width:300px;
+    text-shadow: 2px 1px black;
+
+
+}
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top:50px;
+}
+h2{
+    margin-top:0px;
+    color: #333;
+    text-align: center;
+    
+}
+ul {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding-left:30px;
+    padding-right : 30px
+}
+li {
+    margin: 10px 0;
+}
+.btnandtitle{
+    width:400px;
+    display:flex;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left:30px
+    
+}
+.click{
+    width:100px;
+    height:30px;
+    text-align: center;
+    background-color: rgb(44, 215, 234);
+    font-size:15px;
+    font-weight:500;
+    border-radius:7px;
+    margin-top:10px;
+    margin-left:20px
+}
+.area{
+    width:800px;
+    height:400px;
+    margin-left:30px
+}
+  .footer-content {
+    background-color: #17518b; 
+    color: white;
+    
+    text-align: center; 
+    position: relative; 
+    bottom: 0; 
+ 
+    margin-top:-40px;
+    margin-left:20px;
+    margin-right:20px;
+    height:50px;
+    padding-bottom:10px
+  }

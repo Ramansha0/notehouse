@@ -982,7 +982,7 @@ align-items: center;
   }
 }
 
-#loader {
+#loader{
 display:none;
   position: fixed;
   top: 50%;
@@ -991,5 +991,34 @@ display:none;
   z-index: 10;
   width: 80px;
   height: 80px;
-  font-size:30px
+  font-size:40px;
+  color:rgb(79, 255, 79);
+  font-weight:700;
+text-shadow: 2px 2px 2px black;
+}
+
+.load{
+display:none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height:40px;
+width:40px;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius:50%;
+  border:10px dotted black;
+  border-bottom: 10px dotted rgb(70, 206, 255);
+  animation:rotate 1s linear infinite;
+}
+
+@keyframes rotate{
+
+0%{
+  rotate:0deg;
+
+}
+100% {
+  rotate:360deg;
+}
 }
