@@ -43,3 +43,4 @@ personal1.addEventListener("click", () => {
 }, 3000);
    
 })
+
