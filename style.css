@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 body {
@@ -9,6 +9,11 @@ padding: 0;
 overflow-x: hidden;
 }
 
+<<<<<<< HEAD
+=======
+/* comment */
+html,
+>>>>>>> db6c97f8d1e61d55f459b108ebe3980698ce20c0
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,12 +25,20 @@ body {
 
 /* Header Styling */
 header {
+<<<<<<< HEAD
     background-color: white;
     border-bottom: 1px solid #ddd;
 position:relative;
 
 width:100%;
 transition:0.6s ease
+=======
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  width: 100%;
+  transition: 0.6s ease
+>>>>>>> db6c97f8d1e61d55f459b108ebe3980698ce20c0
 }
 
 /* Navbar Styling */
