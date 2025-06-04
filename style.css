@@ -9,11 +9,6 @@ padding: 0;
 overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-=======
-/* comment */
-html,
->>>>>>> db6c97f8d1e61d55f459b108ebe3980698ce20c0
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -25,20 +20,19 @@ body {
 
 /* Header Styling */
 header {
-<<<<<<< HEAD
-    background-color: white;
+   background-color: white;
     border-bottom: 1px solid #ddd;
 position:relative;
 
 width:100%;
-transition:0.6s ease
-=======
+transition:0.6s ease;
+
   background-color: white;
   border-bottom: 1px solid #ddd;
   position: relative;
   width: 100%;
   transition: 0.6s ease
->>>>>>> db6c97f8d1e61d55f459b108ebe3980698ce20c0
+
 }
 
 /* Navbar Styling */
@@ -388,7 +382,7 @@ border:2px solid black;
   font-weight: bolder;
   margin-top:-0px 
 }
-.aman1{}
+
 .btn-secondary
 {
   background: #007BFF;
@@ -442,11 +436,7 @@ img.a1 {
   height:1px;
   background-color: rgb(121, 156, 247);
 }
-.head{
-  
 
- 
-}
 .toge1{
   margin-top:29px;
   display:flex;
@@ -732,10 +722,7 @@ transform: translateX(0px)
     padding: 0;
     display: flex;
 }
-.link1:hover{
- 
 
-}
 .bt4{
   width:130px;
     height:40px;
@@ -895,12 +882,13 @@ margin-top:-70px
 }
 .first-l{
   background-color:#ddd;
-  height:60px;
+  height:4rem;
   margin-top:1px;
+  width:100%;
   display: flex;
   justify-content:center;
   align-items: center;
-  font-size :18px;
+  font-size :1.2rem;
   font-weight:600;
   border:2px solid black
 }
@@ -1233,12 +1221,76 @@ height: 27vh;
 }
 
 .sen{
-  margin-left: -90px;
+  margin-left: -0px;
 }
+.par{
+   margin-left: -125px;
+   width:90vw;
 
+}
+.links{
+  margin-left:-100px
+}
+.btn3{
+   margin-left:130px;
+}
+.contact-panel
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top:-200px;
+height:700px;
+
+} 
+.down{
+  margin-left:20px;
+
+}
+.para10{
+  width:90vw;
+  margin-left:-50px;
+  font-size:  px;
+
+}
+.bross{
+  margin-left :-46px
+}
+.contact{
+  display: none;
+
+}
+.first-l{
+    padding-left:24px; 
+    font-size: 1em; 
+ margin-bottom: -50px;
+
+}
+  .para20{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
   }
+#cont2{
+  display: none;
+}
+.cont p {
+ margin-bottom:-10px
+
+}
+.i0 p{
+  display:none;
+}
+.i0{
+  display:flex;
+  margin-left:-520px
+}
+.footer{
+  margin-top:50px;
+  margin-left: -20px;
+}
+.footer1{
+  height:850px;
   
-
-
-
-
+}
+}
