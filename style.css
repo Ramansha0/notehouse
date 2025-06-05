@@ -87,17 +87,19 @@ transition:0.6s ease;
 margin-top: 5px;
 display: none ;
 border-radius:5px;
+
 }
 .anything ul{
   color : white ;
   font-size: 17px;
-height:24px;
+height:28px;
 text-align: left;
 padding-top:10px;
-border:1px solid black;
+
+
 }
 .anything ul:hover{
-  background-color:#3c6168
+  background-color:#498ea1
 }
 
 
@@ -289,43 +291,42 @@ background: #0668ca;
 box-shadow: black 0px 5px 15px;
 }
 .cover{
-  background-color: #007BFF;
-border:2px solid black;
-  height:200px;
-  width:100%;
-  margin-top:-20px;
-  margin-bottom: 30px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  animation: floatWater  ease-in-out  both;
+
+height:24vh;
+
+
+margin-bottom: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+    
+      border-radius: 20px;
+      background: linear-gradient(
+        135deg,
+        #a0d8f7,
+        #81c7f5,
+        #5ab1f3,
+        #409be0
+      );
+        color: white;
+      font-weight: 700;
+  
+      box-shadow: 0 15px 40px rgba(64, 155, 224, 0.4);
+      opacity: 0;
+      transform: scale(0.85 ) rotate(-5deg);
+      animation: scaleFadeRotate 1s ease forwards; 
   animation-timeline: view();
   animation-range: entry 0% cover 50%;
+width:90vw;
+font-size:3rem
 }
-@keyframes floatWater {
-  0% {
-      transform: translateY(0) rotate(0deg);
-      background-color: #ffffff;
-  }
-  25% {
-      transform: translateY(-5px) rotate(1deg);
-      background-color: #acd4ff;
-  }
-  50% {
-      transform: translateY(-10px) rotate(0deg);
-      background-color: #57a3f4;
-  }
-  75% {
-      transform: translateY(-5px) rotate(-1deg);
-      background-color: #4b9ff8;
-      
-  }
-  100% {
-      transform: translateY(0) rotate(0deg);
-      background-color: #007BFF;
+  @keyframes scaleFadeRotate {
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
 
-  }
-}
 .features {
   background: linear-gradient(to bottom, white, #87CEEB);
   padding: 2rem 1rem;
@@ -992,14 +993,9 @@ align-items: center;
   }
 }
 .head10{
-  font-size: 70px;
-  text-align: center;
-margin-bottom: 2rem;
-font-size: 80px;
-text-shadow: #0668ca 0px -5px  ;
-font-weight: 600;
-text-decoration:underline;
-margin-bottom:50px;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color:white;
+    font-size:4rem
 }
 
 #loader{
@@ -1171,15 +1167,41 @@ height:auto;
 }
 .cover{
 
-height:13vh;
+height:11vh;
 margin-left:0px;
-
+    text-align: center;
+    
+      border-radius: 20px;
+      background: linear-gradient(
+        135deg,
+        #a0d8f7,
+        #81c7f5,
+        #5ab1f3,
+        #409be0
+      );
+        color: white;
+      font-weight: 700;
+  
+      box-shadow: 0 15px 40px rgba(64, 155, 224, 0.4);
+      opacity: 0;
+      transform: scale(0.85) rotate(-5deg);
+      animation: scaleFadeRotate 1s ease forwards;
+        animation-timeline: view();
+  animation-range: entry 0% cover 50%;
 width:90vw;
-font-size: 10px;
+font-size:3rem;
+
 }
+  @keyframes scaleFadeRotate {
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
 .head10{
   font-size: 30px;
-  padding-top:20px;
+
   display:block
 }
 .course1{
@@ -1223,11 +1245,43 @@ height: 27vh;
 .sen{
   margin-left: -0px;
 }
-.par{
-   margin-left: -125px;
-   width:90vw;
 
-}
+    .par {
+    height:100vh;
+      background: linear-gradient(135deg, #ffffff, #eaf4ff);
+      border-left: 8px solid #3498db;
+      padding: 2rem;
+      margin-left: -135px;
+   width:80vw;
+      border-radius: 20px;
+      box-shadow: 30px 30px 30px 30px rgba(0, 0, 0, 0.1);
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.7;
+
+      opacity: 0;
+       font-family: 'Segoe UI', sans-serif;
+     
+      transform: translateY(40px);
+      transition: all 1s ease-out;
+    }
+
+    .par::before {
+      content: "📚 Noteshouse";
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left:-120px;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .par.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
 .links{
   margin-left:-100px;
 }
@@ -1251,6 +1305,8 @@ height:700px;
   width:90vw;
   margin-left:-50px;
   font-size:  px;
+  animation:none;
+
 
 }
 .bross{
@@ -1264,8 +1320,12 @@ height:700px;
     padding-left:24px; 
     font-size: 1em; 
  margin-bottom: -50px;
+ margin-right:20px
 
 }
+  .letter{
+    padding-right:0.4rem
+  }
   .para20{
   display: flex;
   flex-direction: column;
@@ -1292,5 +1352,10 @@ height:700px;
 .footer1{
   height:850px;
   
+}
+.anything{
+  width:100%;
+  margin-top:9px
+
 }
 }

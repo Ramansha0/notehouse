@@ -78,8 +78,21 @@ else{
 
 
 });
+ const paragraph = document.querySelector('.par');
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          paragraph.classList.add('visible');
+        } else {
+          paragraph.classList.remove('visible'); // remove when out of view
+        }
+      });
+    }, {
+      threshold: 0.2 // visible at 20%
+    });
 
+    observer.observe(paragraph);
 
 //for the search items//
 const questions = [
@@ -89,41 +102,21 @@ const questions = [
   "class 11 math notes",
   "nepali summary",
   "english grammar rules",
-  "computer full form",
-  "publish date of textbook",
-  "author of compulsory english",
   "important long questions",
   "short questions answers",
-  "notes of civic education",
-  "social studies notes",
   "science project ideas",
   "computer assignment pdf",
   "math model questions",
   "chapterwise notes",
   "class 12 solutions",
-  "important definitions",
-  "nepali essay collection",
   // Science Faculty
   "chemical reactions notes",
-  "laws of motion physics",
-  "photosynthesis process",
-  "cell structure biology",
-  "periodic table groups",
-  "acid base neutralization",
   "thermodynamics formulas",
-  "human respiratory system",
-  "plant reproduction notes",
-  "energy conversion physics",
   "organic chemistry basics",
   "electric circuits formulas",
-  "water cycle biology",
-  "force and pressure",
   "optics physics notes",
   "animal kingdom classification",
   "chemical bonding types",
-  "environmental science notes",
-  "microbiology basics",
-  "ecosystem components"
 ];
 
 const searchbox = document.querySelector(".search");
