@@ -1,66 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Class XI - Notes Sky Blue Gradient Box</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Subjects Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #e6f0fa; /* light sky blue background */
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef7fc;
+    }
+
+    .sat {
+      padding: 40px 20px;
       display: flex;
+      flex-direction: column;
+      gap: 40px;
       align-items: center;
+    }
+
+    .toge, .toge1 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
-      height: 100vh;
     }
 
-    .cover {
-      text-align: center;
-      padding: 40px 30px;
+    .course1 {
+      background: linear-gradient(145deg, #cce9ff, #ffffff);
       border-radius: 20px;
-      background: linear-gradient(
-        135deg,
-        #a0d8f7,
-        #81c7f5,
-        #5ab1f3,
-        #409be0
-      );
-      color: white;
-      font-weight: 700;
-      font-size: 3rem;
-      box-shadow: 0 15px 40px rgba(64, 155, 224, 0.4);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
       opacity: 0;
-      transform: scale(0.85) rotate(-5deg);
-      animation: scaleFadeRotate 1s ease forwards;
-
-      
+      transform: translateY(50px);
+      animation: fadeUp 1s forwards;
     }
 
-    @keyframes scaleFadeRotate {
+    .course1:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .ba1 {
+      font-size: 1.8rem;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+
+    .a1 {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #007bff;
+      color: white;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    @keyframes fadeUp {
       to {
         opacity: 1;
-        transform: scale(1) rotate(0deg);
+        transform: translateY(0);
       }
     }
+
+    /* Apply delay for staggered animation */
+    .course1:nth-child(1) { animation-delay: 0.2s; }
+    .course1:nth-child(2) { animation-delay: 0.4s; }
+    .course1:nth-child(3) { animation-delay: 0.6s; }
+
+    .toge1 .course1:nth-child(1) { animation-delay: 0.8s; }
+    .toge1 .course1:nth-child(2) { animation-delay: 1s; }
+    .toge1 .course1:nth-child(3) { animation-delay: 1.2s; }
 
     @media (max-width: 768px) {
-      .cover {
-        font-size: 2rem;
-        padding: 30px 20px;
+      .course1 {
+        width: 90%;
       }
     }
-
-
-    
   </style>
 </head>
 <body>
 
-  <div class="cover">
-    Class XI - Notes
+<div class="sat">
+  <div class="toge">
+    <div class="course1">
+      <h3 class="ba1">Math</h3>
+      <img class="a1" src="https://static.vecteezy.com/system/resources/thumbnails/004/251/195/small/learning-mathematics-of-education-and-knowledge-background-cartoon-illustration-science-technology-engineering-formula-or-basic-math-vector.jpg" alt="Math">
+      <a id="classy1" class="btn">Notes</a>
+    </div>
+    <div class="course1">
+      <h3 class="ba1">Physics</h3>
+      <img class="a1" src="https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170312672/74784719-physics-subject-icon.jpg" alt="Physics">
+      <a id="classy2" class="btn">Notes</a>
+    </div>
+    <div class="course1">
+      <h3 class="ba1">Chemistry</h3>
+      <img class="a1" src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/03/13084442/Importance-and-Scope-of-Chemistry.jpg" alt="Chemistry">
+      <a id="classy3" class="btn">Notes</a>
+    </div>
   </div>
+
+  <div class="toge1">
+    <div class="course1">
+      <h3 class="ba1">Nepali</h3>
+      <p style="font-weight: 600;">You hjlflfgddjfh</p>
+      <a id="classy4" class="btn">Notes</a>
+    </div>
+    <div class="course1">
+      <h3 class="ba1">English</h3>
+      <h1 style="font-size:40px;font-weight:700;color:rgb(136, 28, 28);">A</h1>
+      <a id="classy5" class="btn">Notes</a>
+    </div>
+    <div class="course1">
+      <h3 class="ba1">Computer</h3>
+      <p style="font-weight:600;">You</p>
+      <a id="classy6" class="btn">Notes</a>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

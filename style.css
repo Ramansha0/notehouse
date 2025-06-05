@@ -360,12 +360,15 @@ font-size:3rem
   height: 45vh;
   box-sizing: border-box;
   display: flex;
-
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-
+ .course1:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    }
 .course h3,
 .course1 h3 {
   margin-bottom: 0.75rem;
@@ -1298,14 +1301,15 @@ height:700px;
 
 } 
 .down{
-  margin-left:88px;
+  margin-left:-2.5rem;
+  animation: none;
 
 }
 .para10{
   width:90vw;
   margin-left:-50px;
   font-size:  px;
-  animation:none;
+ 
 
 
 }
