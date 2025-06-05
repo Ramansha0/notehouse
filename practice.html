@@ -1,142 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Subjects Section</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Welcome to NotesHouse</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: #eef7fc;
+      background: linear-gradient(to right, #b3e5fc, #e1f5fe);
+      color: #0a1f44;
     }
 
-    .sat {
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .toge, .toge1 {
+    .intro-section {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .intro-text {
+      flex: 1 1 60%;
+    }
+
+    .intro-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #003c5c;
+    }
+
+    .card {
+      flex: 1 1 35%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      background: #e0f7ff;
+      padding: 25px 20px;
+      border-radius: 15px;
+    }
+
+    .card .socials {
+      display: flex;
       gap: 20px;
-      justify-content: center;
     }
 
-    .course1 {
-      background: linear-gradient(145deg, #cce9ff, #ffffff);
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      width: 250px;
+    .socials a {
+      font-size: 28px;
+      color: #005b8f;
+      transition: 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #003b63;
+      transform: scale(1.15);
+    }
+
+    .btn-wrap {
       text-align: center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeUp 1s forwards;
     }
 
-    .course1:hover {
-      transform: scale(1.05);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .ba1 {
-      font-size: 1.8rem;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
-
-    .a1 {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      background-color: #007bff;
+    .btn-wrap button {
+      background-color: #00aaff;
+      border: none;
       color: white;
-      transition: background 0.3s ease;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #0056b3;
+    .btn-wrap button:hover {
+      background-color: #007bb5;
+      transform: scale(1.05);
     }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Apply delay for staggered animation */
-    .course1:nth-child(1) { animation-delay: 0.2s; }
-    .course1:nth-child(2) { animation-delay: 0.4s; }
-    .course1:nth-child(3) { animation-delay: 0.6s; }
-
-    .toge1 .course1:nth-child(1) { animation-delay: 0.8s; }
-    .toge1 .course1:nth-child(2) { animation-delay: 1s; }
-    .toge1 .course1:nth-child(3) { animation-delay: 1.2s; }
 
     @media (max-width: 768px) {
-      .course1 {
-        width: 90%;
+      .intro-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+      }
+
+      .intro-text,
+      .card {
+        flex: 1 1 100%;
+      }
+
+      .intro-text p {
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="sat">
-  <div class="toge">
-    <div class="course1">
-      <h3 class="ba1">Math</h3>
-      <img class="a1" src="https://static.vecteezy.com/system/resources/thumbnails/004/251/195/small/learning-mathematics-of-education-and-knowledge-background-cartoon-illustration-science-technology-engineering-formula-or-basic-math-vector.jpg" alt="Math">
-      <a id="classy1" class="btn">Notes</a>
-    </div>
-    <div class="course1">
-      <h3 class="ba1">Physics</h3>
-      <img class="a1" src="https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170312672/74784719-physics-subject-icon.jpg" alt="Physics">
-      <a id="classy2" class="btn">Notes</a>
-    </div>
-    <div class="course1">
-      <h3 class="ba1">Chemistry</h3>
-      <img class="a1" src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/03/13084442/Importance-and-Scope-of-Chemistry.jpg" alt="Chemistry">
-      <a id="classy3" class="btn">Notes</a>
-    </div>
-  </div>
+  <div class="intro-section">
+    <div class="intro-text">
+      <p>
+        <strong>Welcome to NotesHouse</strong>, your trusted source for high-quality assignment notes
+        and academic resources. We understand the challenges students face, which is why we've made it
+        our mission to simplify learning through well-structured, easy-to-understand materials.
 
-  <div class="toge1">
-    <div class="course1">
-      <h3 class="ba1">Nepali</h3>
-      <p style="font-weight: 600;">You hjlflfgddjfh</p>
-      <a id="classy4" class="btn">Notes</a>
+        <br><br> Whether you're prepping for exams, tackling complex topics, or just need a study boost,
+        our expert-crafted notes are here to guide you. Each resource is designed to align with current
+        academic standards, helping you save time and reduce stress.
+
+        <br><br> Join our community of learners and make your academic journey smoother and more successful!
+      </p>
     </div>
-    <div class="course1">
-      <h3 class="ba1">English</h3>
-      <h1 style="font-size:40px;font-weight:700;color:rgb(136, 28, 28);">A</h1>
-      <a id="classy5" class="btn">Notes</a>
-    </div>
-    <div class="course1">
-      <h3 class="ba1">Computer</h3>
-      <p style="font-weight:600;">You</p>
-      <a id="classy6" class="btn">Notes</a>
+
+    <div class="card">
+      <div class="socials">
+        <a href="https://github.com/Ramansha0" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100075112053408" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="btn-wrap">
+        <button onclick="window.location.href='#'">Portfolio</button>
+      </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>
