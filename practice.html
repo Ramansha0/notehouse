@@ -2,137 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Welcome to NotesHouse</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Notes Grid</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #b3e5fc, #e1f5fe);
-      color: #0a1f44;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
     }
 
-    .intro-section {
-      max-width: 1100px;
-      margin: 60px auto;
-      background: #ffffff;
-      border-radius: 20px;
-      padding: 40px 30px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 40px;
+    .features {
+      padding: 40px 20px;
     }
 
-    .intro-text {
-      flex: 1 1 60%;
+    .container {
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .intro-text p {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #003c5c;
+    .head10 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #003554;
     }
 
-    .card {
-      flex: 1 1 35%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-      background: #e0f7ff;
-      padding: 25px 20px;
-      border-radius: 15px;
-    }
-
-    .card .socials {
-      display: flex;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns desktop */
       gap: 20px;
     }
 
-    .socials a {
-      font-size: 28px;
-      color: #005b8f;
-      transition: 0.3s ease;
+    /* Tablets and below: 2 columns */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    .socials a:hover {
-      color: #003b63;
-      transform: scale(1.15);
+    /* Mobile: 1 column */
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .btn-wrap {
+    .course1 {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease;
+    }
+
+    .course1:hover {
+      transform: translateY(-5px);
+    }
+
+    .course1 h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #0077b6;
       text-align: center;
     }
 
-    .btn-wrap button {
-      background-color: #00aaff;
-      border: none;
-      color: white;
-      padding: 10px 25px;
-      font-size: 16px;
+    .course1 img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
+      margin-bottom: 15px;
     }
 
-    .btn-wrap button:hover {
-      background-color: #007bb5;
-      transform: scale(1.05);
+    .course1 p {
+      text-align: center;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #444;
     }
 
-    @media (max-width: 768px) {
-      .intro-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 20px;
-      }
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+      margin-top: auto;
+      transition: background 0.2s ease;
+    }
 
-      .intro-text,
-      .card {
-        flex: 1 1 100%;
-      }
+    .btn:hover {
+      background-color: #005f87;
+    }
 
-      .intro-text p {
-        font-size: 16px;
-      }
+    .line2 {
+      height: 4px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      margin: 50px 0;
     }
   </style>
 </head>
 <body>
 
-  <div class="intro-section">
-    <div class="intro-text">
-      <p>
-        <strong>Welcome to NotesHouse</strong>, your trusted source for high-quality assignment notes
-        and academic resources. We understand the challenges students face, which is why we've made it
-        our mission to simplify learning through well-structured, easy-to-understand materials.
+<section class="features">
+  <div class="container">
+    <p class="head10">Class XI - Notes</p>
 
-        <br><br> Whether you're prepping for exams, tackling complex topics, or just need a study boost,
-        our expert-crafted notes are here to guide you. Each resource is designed to align with current
-        academic standards, helping you save time and reduce stress.
-
-        <br><br> Join our community of learners and make your academic journey smoother and more successful!
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="socials">
-        <a href="https://github.com/Ramansha0" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100075112053408" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+    <div class="grid">
+      <div class="course1">
+        <h3>Math</h3>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/004/251/195/small/learning-mathematics-of-education-and-knowledge-background-cartoon-illustration-science-technology-engineering-formula-or-basic-math-vector.jpg" alt="Math">
+        <p>All chapters and solutions</p>
+        <a href="#" class="btn">Notes</a>
       </div>
-      <div class="btn-wrap">
-        <button onclick="window.location.href='#'">Portfolio</button>
+
+      <div class="course1">
+        <h3>Physics</h3>
+        <img src="https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170312672/74784719-physics-subject-icon.jpg" alt="Physics">
+        <p>Concepts, laws and numericals</p>
+        <a href="#" class="btn">Notes</a>
+      </div>
+
+      <div class="course1">
+        <h3>Chemistry</h3>
+        <img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/03/13084442/Importance-and-Scope-of-Chemistry.jpg" alt="Chemistry">
+        <p>Organic, Inorganic and Physical</p>
+        <a href="#" class="btn">Notes</a>
+      </div>
+      <div class="course1">
+  <h3>Nepali</h3>
+  <img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png" alt="Nepali Book" style="height:150px; object-fit:contain;">
+  <p>Grammar, Poems and Stories</p>
+  <a href="#" class="btn">Notes</a>
+</div>
+
+      <div class="course1">
+        <h3>Nepali</h3>
+        <img src="https://img.freepik.com/free-vector/book-library-concept-illustration_114360-1034.jpg" alt="Nepali">
+        <p>Grammar, Poems and Stories</p>
+        <a href="#" class="btn">Notes</a>
+      </div>
+
+      <div class="course1">
+        <h3>English</h3>
+        <img src="https://img.freepik.com/free-vector/english-teacher-concept-illustration_114360-7559.jpg" alt="English">
+        <p>Literature and Writing Practice</p>
+        <a href="#" class="btn">Notes</a>
+      </div>
+
+      <div class="course1">
+        <h3>Computer</h3>
+        <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" alt="Computer">
+        <p>Basic programming and theory</p>
+        <a href="#" class="btn">Notes</a>
       </div>
     </div>
   </div>
+</section>
+
+<div class="line2"></div>
 
 </body>
 </html>
