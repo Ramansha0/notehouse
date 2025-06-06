@@ -1,20 +1,27 @@
-// Smooth scroll to contact section
-const contactBtn = document.getElementById('c-btn');
+const contactBtns = document.querySelectorAll('.c-btn');
 const contactSection = document.getElementById('contact-page');
-if (contactBtn && contactSection) {
-  contactBtn.addEventListener('click', () => {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
+
+if (contactBtns.length > 0 && contactSection) {
+  contactBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
   });
 }
 
+
 // Smooth scroll to about section
-const aboutBtn = document.querySelector('.about1');
+const aboutBtns = document.querySelectorAll('.about1');
 const aboutSection = document.getElementById('about-section');
-if (aboutBtn && aboutSection) {
-  aboutBtn.addEventListener('click', () => {
-    aboutSection.scrollIntoView({ behavior: 'smooth' });
+
+if (aboutBtns.length > 0 && aboutSection) {
+  aboutBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    });
   });
 }
+
 
 // Smooth scroll to container section
 const containerBtn = document.getElementById('bt0');
