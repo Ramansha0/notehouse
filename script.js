@@ -1,155 +1,130 @@
-let btn = document.getElementById('c-btn');
-let page = document.getElementById('contact-page');
+// Smooth scroll to contact section
+const contactBtn = document.getElementById('c-btn');
+const contactSection = document.getElementById('contact-page');
+if (contactBtn && contactSection) {
+  contactBtn.addEventListener('click', () => {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 
-btn.addEventListener('click',function(){
-    page.scrollIntoView();
-});
-let btn1 = document.querySelector('.about1');
-let page1 = document.querySelector('.about');
+// Smooth scroll to about section
+const aboutBtn = document.querySelector('.about1');
+const aboutSection = document.getElementById('about-section');
+if (aboutBtn && aboutSection) {
+  aboutBtn.addEventListener('click', () => {
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 
-btn1.addEventListener('click',function(){
-    page1.scrollIntoView();
-});
-let button = document.getElementById("bt0");
-let containerp = document.getElementById("container-page");
+// Smooth scroll to container section
+const containerBtn = document.getElementById('bt0');
+const containerPage = document.getElementById('container-page');
+if (containerBtn && containerPage) {
+  containerBtn.addEventListener('click', () => {
+    containerPage.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 
-bt0.addEventListener('click', () => {
-    containerp.scrollIntoView();
-})
-
+// Show scroll-up button on scroll
 const scrollUpBtn = document.getElementById("scrollUpBtn");
-
-
-window.onscroll = () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     scrollUpBtn.style.display = "block";
   } else {
     scrollUpBtn.style.display = "none";
   }
+});
+
+// Scroll to top when scroll-up button clicked
+if (scrollUpBtn) {
+  scrollUpBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Redirect with loader
+const personal1 = document.getElementById("personal1");
+const personal2 = document.getElementById("button");
+const loader = document.getElementById("loader10");
+const redict = document.getElementById("redict");
+
+const redirectWithLoader = (url, delay = 1000) => {
+  if (loader) loader.style.display = "block";
+  setTimeout(() => {
+    window.location.href = url;
+  }, delay);
 };
 
-
-scrollUpBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-let personal1 = document.getElementById("personal1");
-let personal2 = document.getElementById("button");
-
-personal1.addEventListener("click", () => {
-  load.style.display = "block";
-    setTimeout(() => {
-        window.location.href = "https://ramansha0.github.io/Portfolio/";
-}, 1000);
-   
-})
-personal2.addEventListener("click", () => {
-  load.style.display = "block";
-    setTimeout(() => {
-        window.location.href = "https://ramansha0.github.io/Portfolio/";
-}, 1000);
-   
-})
-//Redirecting the page//
-var redict = document.getElementById("redict")
-var load =   document.getElementById("loader10")
-redict.addEventListener("click",function(){
-    load.style.display = "block";
-  setTimeout(() => {
-    window.location.href = "http://127.0.0.1:5500/index1.html";
-
-  }, 2000);
-})
-
-//light and the dark//
-var bull = document.getElementById("puja");
-var box10 = document.getElementById("dinchak"); // select the element first
-var  ram=1;
-bull.addEventListener("click", function() {
- 
-if(ram==1){
-  box10.style.display = "block";
-ram=2;
+if (personal1) {
+  personal1.addEventListener("click", () => redirectWithLoader("https://ramansha0.github.io/Portfolio/"));
 }
-else{
-  box10.style.display = "none";
-  ram=1;
+if (personal2) {
+  personal2.addEventListener("click", () => redirectWithLoader("https://ramansha0.github.io/Portfolio/"));
+}
+if (redict) {
+  redict.addEventListener("click", () => redirectWithLoader("http://127.0.0.1:5500/index1.html", 2000));
 }
 
+// Light/Dark toggle
+const toggleBtn = document.getElementById("puja");
+const toggleBox = document.getElementById("dinchak");
+let toggleState = 1;
 
-});
- const paragraph = document.querySelector('.par');
+if (toggleBtn && toggleBox) {
+  toggleBtn.addEventListener("click", () => {
+    toggleBox.style.display = (toggleState === 1) ? "block" : "none";
+    toggleState = (toggleState === 1) ? 2 : 1;
+  });
+}
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          paragraph.classList.add('visible');
-        } else {
-          paragraph.classList.remove('visible'); // remove when out of view
-        }
-      });
-    }, {
-      threshold: 0.2 // visible at 20%
+// Paragraph intersection observer
+const paragraph = document.querySelector('.par');
+if (paragraph) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      paragraph.classList.toggle('visible', entry.isIntersecting);
     });
+  }, { threshold: 0.2 });
 
-    observer.observe(paragraph);
+  observer.observe(paragraph);
+}
 
-//for the search items//
-const questions = [
-  "chemistry notes",
-  "physics formulas",
-  "biology diagram",
-  "class 11 math notes",
-  "nepali summary",
-  "english grammar rules",
-  "important long questions",
-  "short questions answers",
-  "science project ideas",
-  "computer assignment pdf",
-  "math model questions",
-  "chapterwise notes",
-  "class 12 solutions",
-  // Science Faculty
-  "chemical reactions notes",
-  "thermodynamics formulas",
-  "organic chemistry basics",
-  "electric circuits formulas",
-  "optics physics notes",
-  "animal kingdom classification",
-  "chemical bonding types",
-];
-
+// Search bar filter
 const searchbox = document.querySelector(".search");
 const show = document.querySelector(".anything");
 
-searchbox.onkeyup = function() {
-  let result = [];
-  let search = searchbox.value;
+const questions = [
+  "chemistry notes", "physics formulas", "biology diagram", "class 11 math notes",
+  "nepali summary", "english grammar rules", "important long questions",
+  "short questions answers", "science project ideas", "computer assignment pdf",
+  "math model questions", "chapterwise notes", "class 12 solutions",
+  "chemical reactions notes", "thermodynamics formulas", "organic chemistry basics",
+  "electric circuits formulas", "optics physics notes", "animal kingdom classification",
+  "chemical bonding types"
+];
 
-  if (search.length > 0) {
-    result = questions.filter(function(item) {
-      return item.toLowerCase().includes(search.toLowerCase());
-    });
-   
+function displayResults(results) {
+  if (show) {
+    if (results.length === 0) {
+      show.innerHTML = "<p class='not-found'>No results found</p>";
+      show.style.display = "block";
+    } else {
+      show.innerHTML = results.map(item => `<ul>${item}</ul>`).join("");
+      show.style.display = "block";
+    }
   }
-  display(result);
-
 }
-document.addEventListener("click", function(event) {
-  // If the click is NOT inside the search box or suggestion box
-  if (!searchbox.contains(event.target) && !show.contains(event.target)) {
-    show.style.display = "none";
-  }
-});
 
-function display(result) {
-  if (result.length === 0) {
-    show.style.display = "none";
-    show.innerHTML = "<p class='not-found'>No results found</p>";
-  } else {
-    show.style.display = "block";
-    show.innerHTML = result.map(function(item) {
-      return `<ul>${item}</ul>`;
-    }).join("");
-  }
+if (searchbox && show) {
+  searchbox.addEventListener("keyup", () => {
+    const value = searchbox.value.toLowerCase();
+    const filtered = questions.filter(q => q.toLowerCase().includes(value));
+    displayResults(value.length > 0 ? filtered : []);
+  });
+
+  document.addEventListener("click", e => {
+    if (!searchbox.contains(e.target) && !show.contains(e.target)) {
+      show.style.display = "none";
+    }
+  });
 }
