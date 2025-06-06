@@ -1,179 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Notes Grid</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrollable Div Example</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f7fa;
-    }
-
-    .features {
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .head10 {
-      font-size: 2rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 30px;
-      color: #003554;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns desktop */
-      gap: 20px;
-    }
-
-    /* Tablets and below: 2 columns */
-    @media (max-width: 992px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Mobile: 1 column */
-    @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .course1 {
-      background: #fff;
+      font-family: Arial, sans-serif;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease;
+      background-color: #f5f5f5;
     }
 
-    .course1:hover {
-      transform: translateY(-5px);
-    }
-
-    .course1 h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #0077b6;
-      text-align: center;
-    }
-
-    .course1 img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .course1 p {
-      text-align: center;
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: #444;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      background-color: #0077b6;
-      color: white;
-      text-decoration: none;
+    .scrollable-box {
+      width: 90%;
+      max-width: 500px;
+      height: 200px;
+      margin: auto;
       padding: 10px;
-      border-radius: 6px;
-      text-align: center;
-      font-weight: bold;
-      margin-top: auto;
-      transition: background 0.2s ease;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .btn:hover {
-      background-color: #005f87;
+    .scrollable-box p {
+      margin: 10px 0;
     }
 
-    .line2 {
-      height: 4px;
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      margin: 50px 0;
+    @media (max-width: 600px) {
+      .scrollable-box {
+        height: 250px;
+        width: 95%;
+      }
     }
   </style>
 </head>
 <body>
 
-<section class="features">
-  <div class="container">
-    <p class="head10">Class XI - Notes</p>
+  <h2>Scrollable Content Box</h2>
 
-    <div class="grid">
-      <div class="course1">
-        <h3>Math</h3>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/004/251/195/small/learning-mathematics-of-education-and-knowledge-background-cartoon-illustration-science-technology-engineering-formula-or-basic-math-vector.jpg" alt="Math">
-        <p>All chapters and solutions</p>
-        <a href="#" class="btn">Notes</a>
-      </div>
-
-      <div class="course1">
-        <h3>Physics</h3>
-        <img src="https://previews.123rf.com/images/captainvector/captainvector1703/captainvector170312672/74784719-physics-subject-icon.jpg" alt="Physics">
-        <p>Concepts, laws and numericals</p>
-        <a href="#" class="btn">Notes</a>
-      </div>
-
-      <div class="course1">
-        <h3>Chemistry</h3>
-        <img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2018/03/13084442/Importance-and-Scope-of-Chemistry.jpg" alt="Chemistry">
-        <p>Organic, Inorganic and Physical</p>
-        <a href="#" class="btn">Notes</a>
-      </div>
-      <div class="course1">
-  <h3>Nepali</h3>
-  <img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png" alt="Nepali Book" style="height:150px; object-fit:contain;">
-  <p>Grammar, Poems and Stories</p>
-  <a href="#" class="btn">Notes</a>
-</div>
-
-      <div class="course1">
-        <h3>Nepali</h3>
-        <img src="https://img.freepik.com/free-vector/book-library-concept-illustration_114360-1034.jpg" alt="Nepali">
-        <p>Grammar, Poems and Stories</p>
-        <a href="#" class="btn">Notes</a>
-      </div>
-
-      <div class="course1">
-        <h3>English</h3>
-        <img src="https://img.freepik.com/free-vector/english-teacher-concept-illustration_114360-7559.jpg" alt="English">
-        <p>Literature and Writing Practice</p>
-        <a href="#" class="btn">Notes</a>
-      </div>
-
-      <div class="course1">
-        <h3>Computer</h3>
-        <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" alt="Computer">
-        <p>Basic programming and theory</p>
-        <a href="#" class="btn">Notes</a>
-      </div>
-    </div>
+  <div class="scrollable-box">
+    <p>Line 1: Lorem ipsum dolor sit amet.</p>
+    <p>Line 2: Consectetur adipiscing elit.</p>
+    <p>Line 3: Sed do eiusmod tempor incididunt.</p>
+    <p>Line 4: Ut labore et dolore magna aliqua.</p>
+    <p>Line 5: Ut enim ad minim veniam.</p>
+    <p>Line 6: Quis nostrud exercitation ullamco.</p>
+    <p>Line 7: Laboris nisi ut aliquip ex ea commodo.</p>
+    <p>Line 8: Duis aute irure dolor in reprehenderit.</p>
+    <p>Line 9: Excepteur sint occaecat cupidatat.</p>
+    <p>Line 10: Sunt in culpa qui officia deserunt.</p>
   </div>
-</section>
-
-<div class="line2"></div>
 
 </body>
 </html>

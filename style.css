@@ -3,18 +3,14 @@
 }
 
 body {
-font-family: Arial, sans-serif;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 margin: 0;
 padding: 0;
 overflow-x: hidden;
 }
 
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+
   html,body{
     scroll-behavior: smooth;
   }
@@ -85,6 +81,7 @@ transition:0.6s ease;
    background-color:#1586ff;
    z-index:20;
    position: absolute;
+
 margin-top: 5px;
 display: none ;
 border-radius:5px;
@@ -217,11 +214,11 @@ border-radius:10px;
 }
 .lang{
   margin-left:70px;
-  margin-top: 60px;
-  font-size:60px;
+  margin-top: 80px;
+  font-size:3.3em;
   font-weight:bolder;
   width:600px;
-  font-family:sans-serif;
+
   height:400;
   margin-bottom: 90px;
 
@@ -273,16 +270,16 @@ width:230px;
 height:60px;
 background-color:  #00509e;
 color:white;
-font-family:sans-serif;
+
 font-size:30px;
 font-weight:bolder;
-
+text-align: center;
 border-color:white;
 border-radius: 10px;
-margin-left:150px;
+margin-left:130px;
 margin-bottom: 20px;
 position:absolute;
-margin-top:-160px;
+margin-top:-210px;
 
 
 }
@@ -295,7 +292,7 @@ box-shadow: black 0px 5px 15px;
 
 height:24vh;
 
-margin-left:-37px;
+margin-left:20px;
 margin-bottom: 40px;
 display: flex;
 justify-content: center;
@@ -628,126 +625,117 @@ color:black;
       border-radius: 8px;
       margin-bottom: 15px;
 }
-.about{
-  text-align:center;
-  margin-top:20px
-}
-.first{
-  font-size:60px;
-color:#007BFF;
-opacity:0;
-font-weight:900;
-text-shadow: black 0px -5px  ;
-text-decoration:2px black underline;
-animation: fadedown 2s ease-in-out both;
-animation-timeline:view();
-animation-range: entry 0% cover 50%;
+    header {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
 
-}
-@keyframes fadedown{
-  from{
-    opacity: 0;
-scale:0.2
-  }
-  to{
-    opacity: 1;
-  scale:1
-  }
-}
-.sen{
-  font-size:20px;
-  margin-left:150px;
-  margin-top:20px;
-  font-weight:700;
-  text-decoration: underline;
-}
-.imga{
-  height:390px;
-  width:390px;
-  margin-left:40px;
-  margin-top:30px;
-  border-radius: 10px;
-  border: 2px solid  #007BFF;
-  box-shadow: 0 8px 20px grey;
-  animation: fadeInZoom 2s ease-out forwards;
-  animation-timeline:view();
-animation-range: entry 0% cover 90%;
+    header h1 {
+      font-size: 1.75rem;
+    }
 
-}
-@keyframes fadeInZoom {
-  from {
-      opacity: 0;
-      transform: scale(0.9);
-  }
-  to {
-      opacity: 1;
-      transform: scale(1);
-  }
-}
-.all2{
-  display:flex
-}
-.two{
-  margin-top: px;
-  margin-left:150px;
+    section {
+      padding: 1rem;
+    }
 
+    .hero {
+      text-align: center;
+    }
 
+    .hero img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
 
-}
+    .hero h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
 
-.par{
+    .hero p {
+      font-size: 0.95rem;
+      color: #555;
+    }
 
-  z-index:3;
-  font-weight: 600;
-  font-size :17px;
-margin-left: -70px;
+    .card {
+      background-color: #f3f4f6;
+      border-radius: 8px;
+      margin: 1rem 0.5rem;
+      padding: 1rem;
+    }
 
-  
-}
-@keyframes fadeup {
-  from {
+    .card h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
 
-transform:translateX(200px)
-  }
-  to {
-   
-transform: translateX(0px)
-  }
-}
-.con{
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
 
-  z-index:3;
+    .cta {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      margin: 1.5rem 0.5rem;
+      padding: 1rem;
+    }
 
+    .cta h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
 
-  
-}
-.links{
-  width:200px;
-  font-size:30px;
-    list-style-type: none;
-    margin-left:50px;
-    padding: 0;
-    display: flex;
-}
+    .cta p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
 
-.bt4{
-  width:130px;
-    height:40px;
-    border-radius:5px;
-    background-color:#0668ca ;
-    color:white;
-    font-size:20px;
-    font-weight:600;   
-    margin-top:10px;
-    margin-left:-450px;
-}
-.bt4:hover{
-  transition:opacity .3s ease-in-out;
-background: #0668ca;
-box-shadow: black 0px 5px 15px;
-}
+    .cta a {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #2563eb;
+      padding: 0.6rem 1.2rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
 
+    .cta a:hover {
+      background-color: #e0e7ff;
+    }
 
+    footer {
+      font-size: 0.8rem;
+      text-align: center;
+      color: #888;
+      padding: 1rem;
+    }
+
+    /* Responsive text for smaller devices */
+    @media (max-width: 400px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero h2 {
+        font-size: 1rem;
+      }
+
+      .cta h3 {
+        font-size: 1rem;
+      }
+    }
     #contact-page {
       display: flex;
       flex-wrap: wrap;
@@ -852,7 +840,7 @@ box-shadow: black 0px 5px 15px;
       outline: none;
       padding: 8px;
       background: transparent;
-      font-family: 'Segoe UI', sans-serif;
+   
       color: #333;
     }
 
@@ -882,21 +870,31 @@ box-shadow: black 0px 5px 15px;
       transform: scale(1.05);
     }
 
-    @media (max-width: 768px) {
-      #contact-page {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 15px;
-      }
-.down{
-  animation:none;
+@media (max-width: 768px) {
+  #contact-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px 20px 2px; /* more space on both sides */
+       /* fix invalid rule */
+    width: 93%;   
+    margin-left: 7px;   
+    /* ensure it takes full screen width */
+  }
+
+  .down {
+    animation: none;
+  }
+
+  .photo1,
+  .contact {
+    
+    width: 85%;          /* wider than 85% */
+    max-width: 600px;  
+  margin-left: 5px;
+    /* allow a larger max width if available */
+  }
 }
-      .photo1,
-      .contact {
-        width: 85%;
-        max-width: 500px;
-      }
-    }
+
 .footer1{
   background: linear-gradient(135deg, #d1f1ff, #c0eaff);
      
@@ -1130,6 +1128,7 @@ html,body{
     width:450px ;
     z-index: 9;;
     display: none;
+  
     
   }
   .name1{
@@ -1141,11 +1140,12 @@ html,body{
   #lan{
     display:block;
     margin-top:-70px;
-    font-size:7vw;
+    font-size:1.4em;
     padding-left:0px;
-    width:100%;
+    width:90%;
     margin-left:1.5rem;
-    margin-bottom:40px 
+    margin-bottom:40px ;
+      margin-right:20px;
    
   }
 
@@ -1157,14 +1157,18 @@ html,body{
     z-index:10;
 
     margin-top:10rem;
-    margin-left:1rem
+    margin-left:1.5rem
   }
 
   .search {
-width:80%;
+width:77%;
     font-size: 14px;
     height:25px;
-        margin-botto :100px;
+     
+  }
+  .anything{
+
+    width: 100%;
   }
   .name1{
     width: 90%;
@@ -1227,7 +1231,7 @@ font-size:3rem;
 }
 .course1{
   margin-bottom: 20px;
-height: 27vh;
+height: 29vh;
 
 }
   
@@ -1253,11 +1257,11 @@ height: 27vh;
   margin-left:-0px
 }
 #classy5{
-  margin-top:-23px;
+  margin-top:-27px;
   margin-left:-0px
 }
 #classy6{
-  margin-top:5px;
+  margin-top:3px;
   margin-left:-0px
 }
 .imga{
@@ -1269,43 +1273,6 @@ height: 27vh;
   margin-left: -0px;
 }
 
-.two{
-  width:80%;
-}
-    .par {
-    height:100vh;
-      background: linear-gradient(135deg, #ffffff, #eaf4ff);
-      border-left: 8px solid #3498db;
-      padding: 2rem;
-      margin-left: -135px;
-   width:80vw;
-      border-radius: 20px;
-      box-shadow: 30px 30px 30px 30px rgba(0, 0, 0, 0.1);
-      color: #333;
-      font-size: 1.1rem;
-      line-height: 1.7;
-
-      opacity: 0;
-       font-family: 'Segoe UI', sans-serif;
-     
-      transform: translateY(40px);
-      transition: all 1s ease-out;
-    }
-
-    .par::before {
-      content: "📚 Noteshouse";
-      display: block;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-left:-120px;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
-    .par.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
 
 .links{
@@ -1314,9 +1281,12 @@ height: 27vh;
 .btn3{
    margin-left:130px;
 }
+.letter{
+  margin-right: 30px;
+}
 .first-l{
-  padding-right:  12px;
-  
+
+  font-size: 0.9em;
   padding-left:  16px;
 }
 .footer1 {
