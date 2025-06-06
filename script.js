@@ -49,9 +49,7 @@ if (scrollUpBtn) {
   });
 }
 
-// Redirect with loader
-const personal1 = document.getElementById("personal1");
-const personal2 = document.getElementById("button");
+const personalLinks = document.querySelectorAll(".perso");
 const loader = document.getElementById("loader10");
 const redict = document.getElementById("redict");
 
@@ -62,15 +60,21 @@ const redirectWithLoader = (url, delay = 1000) => {
   }, delay);
 };
 
-if (personal1) {
-  personal1.addEventListener("click", () => redirectWithLoader("https://ramansha0.github.io/Portfolio/"));
-}
-if (personal2) {
-  personal2.addEventListener("click", () => redirectWithLoader("https://ramansha0.github.io/Portfolio/"));
-}
+// ✅ Add event listener to each ".perso" element
+personalLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    redirectWithLoader("https://ramansha0.github.io/Portfolio/");
+  });
+});
+
+// ✅ redict button works as expected
 if (redict) {
-  redict.addEventListener("click", () => redirectWithLoader("http://127.0.0.1:5500/index1.html", 2000));
+  redict.addEventListener("click", () => {
+    redirectWithLoader("http://127.0.0.1:5500/index1.html", 2000);
+  });
 }
+
+
 
 // Light/Dark toggle
 const toggleBtn = document.getElementById("puja");
